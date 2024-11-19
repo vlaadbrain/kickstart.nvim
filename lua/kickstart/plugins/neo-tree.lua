@@ -11,13 +11,29 @@ return {
   },
   cmd = 'Neotree',
   keys = {
-    { '\\', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<F1>', ':Neotree buffers reveal float<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<F2>', ':Neotree reveal<CR>', desc = 'NeoTree reveal', silent = true },
+    { '<F3>', ':Neotree git_status reveal float<CR>', desc = 'NeoTree reveal', silent = true },
   },
   opts = {
+    buffers = {
+      window = {
+        mappings = {
+          ['<F1>'] = 'close_window',
+        },
+      },
+    },
     filesystem = {
       window = {
         mappings = {
-          ['\\'] = 'close_window',
+          ['<F2>'] = 'close_window',
+        },
+      },
+    },
+    git_status = {
+      window = {
+        mappings = {
+          ['<F3>'] = 'close_window',
         },
       },
     },
