@@ -187,6 +187,11 @@ return {
           },
         },
       },
+      astro = {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        filetypes = { 'astro' },
+      },
     }
 
     -- Ensure the servers and tools above are installed
